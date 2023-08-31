@@ -1,0 +1,22 @@
+.signin-form-container {
+  width: 450px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  h2 {
+    margin: 10px 0;
+  }
+  .input-container {
+    height: 50%;
+  }
+  .buttons-containers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+    .button-container {
+      width: fit-content;
+    }
+  }
+}

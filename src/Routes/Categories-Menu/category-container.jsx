@@ -1,5 +1,5 @@
 import "./categories.style.scss";
-import CategoryCard from "../../Category-container/category-card.component";
+import CategoryCard from "../../Components/Category-container/category-card.component";
 import categoriesData from "./categories.json";
 import { Outlet } from "react-router";
 
