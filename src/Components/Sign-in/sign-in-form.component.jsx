@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
@@ -7,6 +7,7 @@ import {
 import Button from "../button/button.component";
 import FormInput from "../form-Component/form-input.component";
 import "./signin-form-component.style.scss";
+import { UserContext } from "../../contexts/User.Context";
 
 const DEFAULT_FORM_VALUES = {
   email: "",
@@ -16,11 +17,13 @@ const DEFAULT_FORM_VALUES = {
 const SignInForm = () => {
   const [loginDetails, setLoginDetails] = useState(DEFAULT_FORM_VALUES);
   const { email, password } = loginDetails;
+  const { setCurrentUser } = useContext(UserContext);
 
   const logGoogleUser = async () => {
     try {
       const { user } = await signInWithGooglePopup();
-      const datamodel = await createUserDocumentFromAuth(user);
+      // const datamodel = await createUserDocumentFromAuth(user);
+      setCurrentUser(user);
     } catch (error) {
       console.log("There is an Error", error);
     }
@@ -28,8 +31,8 @@ const SignInForm = () => {
 
   const SigninUser = async () => {
     try {
-      const response = await signinWithUserEmailAndPassword(email, password);
-      console.log(response);
+      const { user } = await signinWithUserEmailAndPassword(email, password);
+      setCurrentUser(user);
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":

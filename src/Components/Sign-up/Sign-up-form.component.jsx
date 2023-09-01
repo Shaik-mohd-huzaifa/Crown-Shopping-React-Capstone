@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   signupWithUserEmailAndPassword,
   createUserDocumentFromAuth,
+  signinWithUserEmailAndPassword,
 } from "../../utils/Firebase/firebase.utils";
 import FormInput from "../form-Component/form-input.component";
 import "./Sign-up-form.component.scss";
 import Button from "../button/button.component";
+import { UserContext } from "../../contexts/User.Context";
+
 const formDataDefault = {
   displayName: "",
   email: "",
@@ -16,6 +19,7 @@ const formDataDefault = {
 const SignUpForm = () => {
   const [formData, setFormData] = useState(formDataDefault);
   const { displayName, email, password, repeatpassword } = formData;
+  const { setCurrentUser } = useContext(UserContext);
 
   const resetForm = () => {
     setFormData(formDataDefault);
@@ -30,7 +34,12 @@ const SignUpForm = () => {
 
     try {
       const { user } = await signupWithUserEmailAndPassword(email, password);
-      createUserDocumentFromAuth(user, { displayName });
+      await createUserDocumentFromAuth(user, { displayName });
+      const { user: currentUser } = await signinWithUserEmailAndPassword(
+        email,
+        password,
+      );
+      setCurrentUser(currentUser);
       resetForm();
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
@@ -46,7 +55,7 @@ const SignUpForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  console.log(formData);
+  // console.log(formData);
   return (
     <div className="signup-form-container">
       <h2>Don't have an account?</h2>
