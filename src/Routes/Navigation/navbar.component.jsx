@@ -8,12 +8,11 @@ import Button from "../../Components/button/button.component";
 import { userSignOut } from "../../utils/Firebase/firebase.utils";
 
 export const Navbar = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
   console.log(currentUser);
 
   const HandleSignout = async () => {
     await userSignOut();
-    setCurrentUser(null);
   };
 
   return (

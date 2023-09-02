@@ -19,7 +19,7 @@ const formDataDefault = {
 const SignUpForm = () => {
   const [formData, setFormData] = useState(formDataDefault);
   const { displayName, email, password, repeatpassword } = formData;
-  const { setCurrentUser } = useContext(UserContext);
+  // const { setCurrentUser } = useContext(UserContext);s
 
   const resetForm = () => {
     setFormData(formDataDefault);
@@ -34,12 +34,13 @@ const SignUpForm = () => {
 
     try {
       const { user } = await signupWithUserEmailAndPassword(email, password);
+      console.log(user);
       await createUserDocumentFromAuth(user, { displayName });
-      const { user: currentUser } = await signinWithUserEmailAndPassword(
-        email,
-        password,
-      );
-      setCurrentUser(currentUser);
+      // const { user: currentUser } = await signinWithUserEmailAndPassword(
+      //   email,
+      //   password,
+      // );
+      // setCurrentUser(currentUser);
       resetForm();
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {

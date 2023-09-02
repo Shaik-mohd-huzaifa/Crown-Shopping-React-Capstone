@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
@@ -8,6 +9,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
@@ -77,3 +79,7 @@ export const signinWithUserEmailAndPassword = async (email, password) => {
 };
 
 export const userSignOut = async () => await signOut(auth);
+
+export const onAuthUserStateChanged = (callback) => {
+  onAuthStateChanged(auth, callback);
+};
