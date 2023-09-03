@@ -6,9 +6,13 @@ import { UserContext } from "../../contexts/User.Context";
 import "./navigation.styles.scss";
 import Button from "../../Components/button/button.component";
 import { userSignOut } from "../../utils/Firebase/firebase.utils";
+import CartIcon from "../../Components/Cart/Cart.component";
+import CartDropDown from "../../Components/Cart-Dropdown/Cart-dropdown.component";
+import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
 
 export const Navbar = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(ShoppingCartContext);
   console.log(currentUser);
 
   const HandleSignout = async () => {
@@ -34,7 +38,9 @@ export const Navbar = () => {
               Sign in
             </Link>
           )}
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropDown />}
       </div>
       <Outlet />
     </Fragment>
