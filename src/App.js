@@ -4,6 +4,7 @@ import { CategoryContainer } from "./Routes/Categories-Menu/category-container";
 import { Navbar } from "./Routes/Navigation/navbar.component";
 import Signin from "./Routes/Authentication/authentication.component";
 import Shop from "./Routes/Shop/shop.component";
+import Checkout from "./Routes/Checkout/Checkout.component";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<CategoryContainer />} />
           <Route path="shop" element={<Shop />} />
           <Route path="auth" element={<Signin />} />
+          <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
       {/* <CategoryContainer /> */}

@@ -4,17 +4,12 @@ import "./cart-icon.styles.scss";
 import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
 
 const CartIcon = () => {
-  const { isCartOpen, setCartState, cartItems } =
+  const { isCartOpen, setCartState, totalQuantity } =
     useContext(ShoppingCartContext);
 
   const HandleToggle = () => {
     setCartState(!isCartOpen);
   };
-
-  const totalQuantity = cartItems.reduce(
-    (accumulator, currentElement) => accumulator + currentElement.quantity,
-    0,
-  );
 
   return (
     <div className="cart-icon-container" onClick={HandleToggle}>
