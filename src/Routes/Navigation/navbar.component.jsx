@@ -13,7 +13,6 @@ import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
 export const Navbar = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(ShoppingCartContext);
-  console.log(currentUser);
 
   const HandleSignout = async () => {
     await userSignOut();

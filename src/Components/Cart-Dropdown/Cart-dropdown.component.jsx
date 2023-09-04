@@ -13,10 +13,13 @@ const CartDropDown = () => {
         {!cartItems.length ? (
           <p className="error-message">No record Found</p>
         ) : (
-          cartItems.map((item) => <CartItem item={item} />)
+          cartItems.map((item) => <CartItem key={item.id} item={item} />)
         )}
       </div>
-      <Button>CheckOut</Button>
+      <a href="/checkout"></a>
+      <Button ButtonType="" style={{ width: "100%" }}>
+        CheckOut
+      </Button>
     </div>
   );
 };
