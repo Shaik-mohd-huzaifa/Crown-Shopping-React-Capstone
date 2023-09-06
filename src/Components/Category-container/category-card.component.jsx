@@ -1,7 +1,7 @@
 import "./category-card.component.style.scss";
 
 const CategoryCard = ({ title, src }) => (
-  <div className="category-container">
+  <div className="homepage-category-container">
     <div
       className="background-image"
       style={{
