@@ -6,7 +6,7 @@ import {
 } from "../../utils/Firebase/firebase.utils";
 import FormInput from "../form-Component/form-input.component";
 import "./Sign-up-form.component.scss";
-import Button from "../button/button.component";
+import Button, { BUTTON_CLASSES_TYPES } from "../button/button.component";
 import { UserContext } from "../../contexts/User.Context";
 
 const formDataDefault = {
@@ -34,7 +34,6 @@ const SignUpForm = () => {
 
     try {
       const { user } = await signupWithUserEmailAndPassword(email, password);
-      console.log(user);
       await createUserDocumentFromAuth(user, { displayName });
       // const { user: currentUser } = await signinWithUserEmailAndPassword(
       //   email,
@@ -97,7 +96,7 @@ const SignUpForm = () => {
           required
           value={repeatpassword}
         />
-        <Button type="Submit" ButtonType="">
+        <Button type="Submit" ButtonType={BUTTON_CLASSES_TYPES.base}>
           Submit
         </Button>
       </form>

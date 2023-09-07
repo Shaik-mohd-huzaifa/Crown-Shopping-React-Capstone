@@ -12,6 +12,7 @@ export const CategoryContainer = () => {
             title={category.title}
             src={category.imageUrl}
             key={category.id}
+            route={category.route}
           />
         ))}
       </div>

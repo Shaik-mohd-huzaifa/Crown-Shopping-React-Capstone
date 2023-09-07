@@ -1,18 +1,25 @@
-import "./category-card.component.style.scss";
+import {
+  HomePageCategoryContainer,
+  BackgroundImage,
+  CategoryContainer,
+} from "./category-card.styled.jsx";
+import { useNavigate } from "react-router";
 
-const CategoryCard = ({ title, src }) => (
-  <div className="homepage-category-container">
-    <div
-      className="background-image"
-      style={{
-        backgroundImage: `url(${src})`,
-      }}
-    ></div>
-    <div className="category-body-container">
-      <h2>{title}</h2>
-      <a href="https://www.google.com">Shop Now</a>
-    </div>
-  </div>
-);
+const CategoryCard = ({ title, src, route }) => {
+  const navigate = useNavigate();
+
+  const HandleNavigate = () => {
+    navigate(`/${route}`);
+  };
+  return (
+    <HomePageCategoryContainer onClick={HandleNavigate}>
+      <BackgroundImage imageUrl={src}></BackgroundImage>
+      <CategoryContainer>
+        <h2>{title}</h2>
+        <a href="https://www.google.com">Shop Now</a>
+      </CategoryContainer>
+    </HomePageCategoryContainer>
+  );
+};
 
 export default CategoryCard;

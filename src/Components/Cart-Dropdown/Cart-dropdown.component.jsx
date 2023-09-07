@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import Button from "../button/button.component";
-import "./cart-dropdown.styles.scss";
+import {
+  CartDropdownContainer,
+  CartItems,
+  ErrorMessage,
+} from "./cart-dropdown.styled";
 import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
 import { CartItem } from "../cart-item/cart-item.component";
 import { useNavigate } from "react-router-dom";
@@ -13,16 +17,16 @@ const CartDropDown = () => {
   };
 
   return (
-    <div className="cart-dropdown-container">
-      <div className="cart-items">
+    <CartDropdownContainer>
+      <CartItems>
         {!cartItems.length ? (
-          <p className="error-message">No record Found</p>
+          <ErrorMessage>No record Found</ErrorMessage>
         ) : (
           cartItems.map((item) => <CartItem key={item.id} item={item} />)
         )}
-      </div>
+      </CartItems>
       <Button onClick={navigateToCheckout}>CheckOut</Button>
-    </div>
+    </CartDropdownContainer>
   );
 };
 

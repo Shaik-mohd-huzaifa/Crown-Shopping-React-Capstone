@@ -3,12 +3,19 @@ import { Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
 import { ReactComponent as Crown } from "../../assets/crown.svg";
 import { UserContext } from "../../contexts/User.Context";
-import "./navigation.styles.scss";
-import Button from "../../Components/button/button.component";
+import Button, {
+  BUTTON_CLASSES_TYPES,
+} from "../../Components/button/button.component";
 import { userSignOut } from "../../utils/Firebase/firebase.utils";
 import CartIcon from "../../Components/Cart/Cart.component";
 import CartDropDown from "../../Components/Cart-Dropdown/Cart-dropdown.component";
 import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
+import {
+  LogoContainer,
+  NavLinkContainer,
+  Navigation,
+  NavLink,
+} from "./navigation.styled";
 
 export const Navbar = () => {
   const { currentUser } = useContext(UserContext);
@@ -20,27 +27,26 @@ export const Navbar = () => {
 
   return (
     <Fragment>
-      <div className="navigation">
-        <Link to="/" className="logo-container">
+      <Navigation>
+        <LogoContainer to="/">
           <Crown className="logo" />
-        </Link>
-        <div className="nav-links-container">
-          <Link className="nav-link" to="/shop">
-            Shop
-          </Link>
+        </LogoContainer>
+        <NavLinkContainer>
+          <NavLink to="/shop">Shop</NavLink>
           {currentUser ? (
-            <Button ButtonType="" onClick={HandleSignout}>
+            <Button
+              ButtonType={BUTTON_CLASSES_TYPES.base}
+              onClick={HandleSignout}
+            >
               Sign Out
             </Button>
           ) : (
-            <Link className="nav-link" to="/auth">
-              Sign in
-            </Link>
+            <NavLink to="/auth">Sign in</NavLink>
           )}
           <CartIcon />
-        </div>
+        </NavLinkContainer>
         {isCartOpen && <CartDropDown />}
-      </div>
+      </Navigation>
       <Outlet />
     </Fragment>
   );
