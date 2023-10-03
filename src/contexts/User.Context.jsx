@@ -18,12 +18,13 @@ const INITIAL_STATE = {
 };
 
 export const userReducer = (state, action) => {
-  const { type, payload } = action;
+  const { type, currentUser } = action;
   switch (type) {
     case REDUCER_ACTION_TYPES.UPDATE_CURRENT_USER:
+      console.log(currentUser);
       return {
         ...state,
-        currentUser: payload,
+        currentUser,
       };
     default:
       throw new Error(`Unhandled type ${type} in userReducer`);
@@ -43,13 +44,12 @@ export const UserProvider = ({ children }) => {
     const unsubscribe = onAuthUserStateChanged((user) => {
       if (user) {
         createUserDocumentFromAuth(user);
-        setCurrentUser(user);
       }
       setCurrentUser(user);
     });
     return unsubscribe;
   }, []);
 
-  const value = { currentUser, setCurrentUser };
+  const value = { currentUser };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
