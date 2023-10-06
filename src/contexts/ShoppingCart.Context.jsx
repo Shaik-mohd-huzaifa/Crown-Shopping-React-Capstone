@@ -77,16 +77,16 @@ export const ShoppingCartProvider = ({ children }) => {
     useReducer(CartItemsReducer, INTITAL_STATE);
 
   const HandleCartItem = (newCartItems) => {
-    const totalQuantity = cartItems.reduce(
+    console.log(cartItems);
+    const totalQuantity = newCartItems.reduce(
       (accumulator, currentElement) => accumulator + currentElement.quantity,
       0,
     );
 
-    const totalprice = cartItems.reduce(
+    const totalprice = newCartItems.reduce(
       (total, item) => total + item.quantity * item.price,
       0,
     );
-
     const payload = {
       cartItems: newCartItems,
       totalQuantity: totalQuantity,
