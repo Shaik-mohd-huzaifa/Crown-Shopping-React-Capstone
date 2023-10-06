@@ -8,11 +8,11 @@ import {
 } from "./cart-icon.styled.jsx";
 
 const CartIcon = () => {
-  const { isCartOpen, setCartState, totalQuantity } =
+  const { isCartOpen, setCartState, totalQuantity, toggleCart } =
     useContext(ShoppingCartContext);
 
   const HandleToggle = () => {
-    setCartState(!isCartOpen);
+    toggleCart();
   };
 
   return (

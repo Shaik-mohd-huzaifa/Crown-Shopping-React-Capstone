@@ -128,6 +128,7 @@ export const ShoppingCartProvider = ({ children }) => {
     reduceCartItem,
     removeItemfromCart,
     totalPrice,
+    toggleCart,
   };
   return (
     <ShoppingCartContext.Provider value={value}>
