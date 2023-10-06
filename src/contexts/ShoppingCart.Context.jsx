@@ -57,7 +57,6 @@ const INTITAL_STATE = {
 
 export const CartItemsReducer = (state, action) => {
   const { type, payload } = action;
-  console.log(type);
   switch (type) {
     case ACTION_TYPE.ADD_NEW_ITEMS:
       return { ...state, ...payload };
