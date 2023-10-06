@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 
 const HandleCartItems = (cartItems, producttoAdd) => {
   const ExistingProduct = cartItems.find((item) => item.id === producttoAdd.id);
@@ -42,22 +42,29 @@ export const ShoppingCartContext = createContext({
   addCartItems: () => {},
 });
 
+const INTITAL_STATE = {
+  isCartOpen: false,
+  cartItems: [],
+  totalQuantity: 0,
+  totalPrice: 0,
+};
+
+export const CartItemsReducer = ({ state, action }) => {
+  const { type, payload } = action;
+  switch (type) {
+    case "ADD_ITEM_TO_CART":
+      return { ...state, payload };
+    default:
+      console.log("UnRecogonizable Type");
+  }
+};
+
 export const ShoppingCartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setCartState] = useState(false);
   const [totalQuantity, setTotalQuanity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-  const addCartItems = (producttoAdd) => {
-    setCartItems(HandleCartItems(cartItems, producttoAdd));
-  };
-
-  const reduceCartItem = (productid) => {
-    setCartItems(reduceItemQuantity(cartItems, productid));
-  };
-
-  const removeItemfromCart = (productToRemove) => {
-    setCartItems(removeItem(cartItems, productToRemove));
-  };
+  const [{ cart }, dispatch] = useReducer(CartItemsReducer, INTITAL_STATE);
 
   useEffect(() => {
     const countQuantity = cartItems.reduce(
@@ -75,6 +82,17 @@ export const ShoppingCartProvider = ({ children }) => {
     setTotalPrice(totalprice);
   }, [cartItems]);
 
+  const addCartItems = (producttoAdd) => {
+    setCartItems(HandleCartItems(cartItems, producttoAdd));
+  };
+
+  const reduceCartItem = (productid) => {
+    setCartItems(reduceItemQuantity(cartItems, productid));
+  };
+
+  const removeItemfromCart = (productToRemove) => {
+    setCartItems(removeItem(cartItems, productToRemove));
+  };
   const value = {
     cartItems,
     addCartItems,
