@@ -4,6 +4,7 @@ import {
   createUserDocumentFromAuth,
   onAuthUserStateChanged,
 } from "../utils/Firebase/firebase.utils";
+import { setCurrentUser } from "./store/user/user.action";
 import { Routes, Route } from "react-router";
 import { CategoryContainer } from "./Routes/Categories-Menu/category-container";
 import { Navbar } from "./Routes/Navigation/navbar.component";
