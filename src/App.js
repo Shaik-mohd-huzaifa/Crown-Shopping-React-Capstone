@@ -1,4 +1,9 @@
 import "./App.css";
+import { useEffect } from "react";
+import {
+  createUserDocumentFromAuth,
+  onAuthUserStateChanged,
+} from "../utils/Firebase/firebase.utils";
 import { Routes, Route } from "react-router";
 import { CategoryContainer } from "./Routes/Categories-Menu/category-container";
 import { Navbar } from "./Routes/Navigation/navbar.component";
@@ -7,6 +12,15 @@ import Shop from "./Routes/Shop/shop.component";
 import Checkout from "./Routes/Checkout/Checkout.component";
 
 function App() {
+  useEffect(() => {
+    const unsubscribe = onAuthUserStateChanged((user) => {
+      if (user) {
+        createUserDocumentFromAuth(user);
+      }
+      setCurrentUser(user);
+    });
+    return unsubscribe;
+  }, []);
   return (
     <div className="App">
       <Routes>
@@ -17,7 +31,6 @@ function App() {
           <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
-      {/* <CategoryContainer /> */}
     </div>
   );
 }
