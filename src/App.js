@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import {
   createUserDocumentFromAuth,
   onAuthUserStateChanged,
-} from "../utils/Firebase/firebase.utils";
+} from "./utils/Firebase/firebase.utils";
 import { setCurrentUser } from "./store/user/user.action";
 import { useDispatch } from "react-redux";
 
