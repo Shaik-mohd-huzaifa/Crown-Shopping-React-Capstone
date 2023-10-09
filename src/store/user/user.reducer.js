@@ -1,7 +1,4 @@
-export const REDUCER_ACTION_TYPES = {
-  UPDATE_CURRENT_USER: "UPDATE_CURRENT_USER",
-};
-
+import { REDUCER_ACTION_TYPES } from "./user.types";
 const INITIAL_STATE = {
   currentUser: null,
 };
