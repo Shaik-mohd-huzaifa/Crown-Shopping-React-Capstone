@@ -9,27 +9,30 @@ export const BackgroundImage = styled.div`
 `;
 
 export const CategoryContainer = styled.div`
-  height: fit-content;
-  width: 30%;
-  padding: 0px 10px;
+  height: 50px;
+  width: 100%;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* border-radius: 10px; */
+  background-color: #00000035;
+  backdrop-filter: blur(7px);
   position: absolute;
   font-family: "Inter";
-  margin-bottom: 10px;
   h2 {
     font-weight: bold;
     margin: 0px 0px;
     font-size: 30px;
     text-transform: capitalize;
-    color: black;
+    color: white;
   }
 
   a {
     font-weight: 500;
     font-size: 16px;
+    color: white;
   }
 `;
 
@@ -44,6 +47,7 @@ export const HomePageCategoryContainer = styled.div`
   border-radius: 10px;
   font-family: "Roboto Condensed", "";
   overflow: hidden;
+  position: relative;
 
   &:hover {
     cursor: pointer;
