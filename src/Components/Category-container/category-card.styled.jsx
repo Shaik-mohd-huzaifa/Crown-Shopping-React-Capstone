@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { DEFAULT_COLOURS } from "../../base/default.colors";
 
 export const BackgroundImage = styled.div`
   width: 100%;
@@ -18,6 +19,7 @@ export const CategoryContainer = styled.div`
   /* border: 1px solid black; */
   /* border-radius: 10px; */
   background-color: #00000035;
+  background-color: ${DEFAULT_COLOURS.primaryOptional2};
   backdrop-filter: blur(7px);
   position: absolute;
   font-family: "Inter";
