@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
-import Logo from "../../assets/Brain logo.png";
+import Logo from "../../assets/Website Logo.png";
 import { UserContext } from "../../contexts/User.Context";
 import Footer from "../../Components/Footer/Footer.component";
 import CartIcon from "../../Components/Cart/Cart.component";
