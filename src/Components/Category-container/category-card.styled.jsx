@@ -9,40 +9,39 @@ export const BackgroundImage = styled.div`
 `;
 
 export const CategoryContainer = styled.div`
-  height: 90px;
-  padding: 0 25px;
+  height: fit-content;
+  width: 30%;
+  padding: 0px 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border: 1px solid black;
-  background-color: white;
-  opacity: 0.7;
   position: absolute;
-
+  font-family: "Inter";
+  margin-bottom: 10px;
   h2 {
     font-weight: bold;
-    margin: 0 6px 0;
-    font-size: 22px;
+    margin: 0px 0px;
+    font-size: 30px;
     text-transform: capitalize;
-    color: #4a4a4a;
+    color: black;
   }
 
   a {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 16px;
   }
 `;
 
 export const HomePageCategoryContainer = styled.div`
   min-width: 30%;
-  height: 340px;
+  height: 400px;
   flex: 1 1 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  border: 1px solid black;
   margin: 0 7.5px 15px;
+  border-radius: 10px;
   font-family: "Roboto Condensed", "";
   overflow: hidden;
 
