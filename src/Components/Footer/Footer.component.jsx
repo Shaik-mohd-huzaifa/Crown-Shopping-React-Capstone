@@ -1,7 +1,7 @@
 import {} from "./Footer.styled";
 
 const Footer = () => {
-  return <></>;
+  return <div className="">This is Footer</div>;
 };
 
 export default Footer;
