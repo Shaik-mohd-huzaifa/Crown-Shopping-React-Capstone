@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
 import Logo from "../../assets/Brain logo.png";
 import { UserContext } from "../../contexts/User.Context";
-import Button, {
-  BUTTON_CLASSES_TYPES,
-} from "../../Components/button/button.component";
-import { userSignOut } from "../../utils/Firebase/firebase.utils";
+
 import CartIcon from "../../Components/Cart/Cart.component";
 import CartDropDown from "../../Components/Cart-Dropdown/Cart-dropdown.component";
 import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
@@ -21,10 +18,6 @@ import UserProfile from "../../Components/UserProfileIcon/userProfile.component"
 export const Navbar = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(ShoppingCartContext);
-
-  const HandleSignout = async () => {
-    await userSignOut();
-  };
 
   return (
     <Fragment>
