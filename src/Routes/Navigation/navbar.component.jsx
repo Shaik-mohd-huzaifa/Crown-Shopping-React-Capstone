@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
-import { ReactComponent as Crown } from "../../assets/crown.svg";
+import Logo from "../../assets/Brain logo.png";
 import { UserContext } from "../../contexts/User.Context";
 import Button, {
   BUTTON_CLASSES_TYPES,
@@ -29,7 +29,7 @@ export const Navbar = () => {
     <Fragment>
       <Navigation>
         <LogoContainer to="/">
-          <Crown className="logo" />
+          <img className="logo" src={Logo} alt="logo" />
         </LogoContainer>
         <NavLinkContainer>
           <NavLink to="/shop">Shop</NavLink>
