@@ -13,8 +13,12 @@ export const LogoContainer = styled(Link)`
   height: 100%;
   width: 140px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 10px;
   align-items: center;
+  img {
+    width: 60px;
+  }
 `;
 
 export const NavLinkContainer = styled.div`
