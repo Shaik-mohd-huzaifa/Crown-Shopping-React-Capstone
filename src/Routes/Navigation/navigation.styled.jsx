@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const Navigation = styled.div`
-  height: 100px;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -34,5 +34,5 @@ export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 500a;
 `;
