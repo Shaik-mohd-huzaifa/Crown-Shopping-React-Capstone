@@ -4,7 +4,9 @@ const Intro = () => {
   return (
     <IntroContainer>
       <Content>
-        <h1>Welcome to Couture Cart</h1>
+        <h1>
+          Welcome to <span>Couture Cart</span>
+        </h1>
         <h2>Elevate Your Style with Couture Elegance</h2>
         <p>
           Couture Cart is where fashion meets sophistication. Discover a curated
