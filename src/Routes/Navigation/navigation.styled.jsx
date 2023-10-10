@@ -27,11 +27,12 @@ export const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 10px;
 `;
 
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
 `;

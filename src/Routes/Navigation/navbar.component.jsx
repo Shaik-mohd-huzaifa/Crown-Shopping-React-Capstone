@@ -16,6 +16,7 @@ import {
   Navigation,
   NavLink,
 } from "./navigation.styled";
+import UserProfile from "../../Components/UserProfileIcon/userProfile.component";
 
 export const Navbar = () => {
   const { currentUser } = useContext(UserContext);
@@ -33,20 +34,12 @@ export const Navbar = () => {
         </LogoContainer>
         <NavLinkContainer>
           <NavLink to="/shop">Shop</NavLink>
-          {currentUser ? (
-            <Button
-              ButtonType={BUTTON_CLASSES_TYPES.base}
-              onClick={HandleSignout}
-            >
-              Sign Out
-            </Button>
-          ) : (
-            <NavLink to="/auth">Sign in</NavLink>
-          )}
+          {currentUser || <NavLink to="/auth">Sign in</NavLink>}
           <CartIcon />
         </NavLinkContainer>
         {isCartOpen && <CartDropDown />}
       </Navigation>
+      {currentUser && <UserProfile ProfileImage="../../assets/crown.svg" />}
       <Outlet />
     </Fragment>
   );
