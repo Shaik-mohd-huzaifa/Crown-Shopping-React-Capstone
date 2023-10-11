@@ -22,6 +22,7 @@ const Footer = () => {
             <Button ButtonType={BUTTON_CLASSES_TYPES.inverted}>Sign Up</Button>
             <Button ButtonType={BUTTON_CLASSES_TYPES.inverted}>Log in</Button>
           </QuickLinksContainer>
+          <SocialLinksContainer></SocialLinksContainer>
         </BrandInfo>
       </FooterTop>
       <FooterBottom></FooterBottom>
