@@ -1,9 +1,16 @@
-import { FooterContainer, FooterTop, FooterBottom } from "./Footer.styled";
+import {
+  FooterContainer,
+  FooterTop,
+  FooterBottom,
+  BrandInfo,
+} from "./Footer.styled";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterTop></FooterTop>
+      <FooterTop>
+        <BrandInfo></BrandInfo>
+      </FooterTop>
       <FooterBottom></FooterBottom>
     </FooterContainer>
   );
