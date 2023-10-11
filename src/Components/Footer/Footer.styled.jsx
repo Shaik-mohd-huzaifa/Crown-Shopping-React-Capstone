@@ -51,4 +51,6 @@ export const QuickLinksContainer = styled.div`
   column-gap: 10px;
 `;
 
-export const SocialLinksContainer = styled.div``;
+export const SocialLinksContainer = styled.div`
+  display: flex;
+`;
