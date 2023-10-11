@@ -25,6 +25,7 @@ const Footer = () => {
           </QuickLinksContainer>
           <SocialLinksContainer>
             <img src="" alt="" />
+            <img src="" alt="" />
           </SocialLinksContainer>
         </BrandInfo>
       </FooterTop>
