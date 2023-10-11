@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEFAULT_COLOURS } from "../../base/default.colors";
 
 export const BaseButton = styled.button`
   min-width: 165px;
@@ -8,7 +9,7 @@ export const BaseButton = styled.button`
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: black;
+  background-color: ${DEFAULT_COLOURS.primaryOptional2};
   color: white;
   text-transform: uppercase;
   font-family: "Inter";
@@ -22,7 +23,7 @@ export const BaseButton = styled.button`
   &:hover {
     background-color: white;
     color: black;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 `;
 
