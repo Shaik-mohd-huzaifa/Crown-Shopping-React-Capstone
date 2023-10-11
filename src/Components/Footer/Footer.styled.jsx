@@ -35,6 +35,7 @@ export const LogoContainer = styled.div`
   column-gap: 10px;
   h2 {
     color: white;
+    font-weight: 500;
   }
   img {
     width: 50px;
