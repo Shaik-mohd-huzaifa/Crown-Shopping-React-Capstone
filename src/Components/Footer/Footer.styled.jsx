@@ -19,6 +19,7 @@ export const FooterBottom = styled.div`
   background-color: black;
   display: flex;
   justify-content: space-between;
+  border-bottom-left-radius: 10px;
 `;
 
 export const BrandInfo = styled.div``;
