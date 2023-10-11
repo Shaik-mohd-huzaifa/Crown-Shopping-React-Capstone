@@ -20,7 +20,7 @@ const CartDropDown = () => {
     <CartDropdownContainer>
       <CartItems>
         {!cartItems.length ? (
-          <ErrorMessage>No record Found</ErrorMessage>
+          <ErrorMessage>No Items</ErrorMessage>
         ) : (
           cartItems.map((item) => <CartItem key={item.id} item={item} />)
         )}
