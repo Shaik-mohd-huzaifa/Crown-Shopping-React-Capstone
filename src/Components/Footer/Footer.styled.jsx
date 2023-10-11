@@ -32,6 +32,7 @@ export const BrandInfo = styled.div`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  column-gap: 10px;
   img {
   }
 `;
