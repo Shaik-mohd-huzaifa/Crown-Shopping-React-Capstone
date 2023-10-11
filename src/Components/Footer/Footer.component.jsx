@@ -7,6 +7,7 @@ import {
   LogoContainer,
 } from "./Footer.styled";
 import Logo from "./../../assets/Website Logo.png";
+import Button from "../button/button.component";
 
 const Footer = () => {
   return (
