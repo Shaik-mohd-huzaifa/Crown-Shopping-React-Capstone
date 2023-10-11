@@ -1,3 +1,5 @@
+@import "./../../base/default.colors.scss"; 
+
 .product-card-container {
   width: 100%;
   display: flex;
@@ -10,7 +12,8 @@
     width: 100%;
     height: 95%;
     object-fit: cover;
-    margin-bottom: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
 
   button {
@@ -34,19 +37,18 @@
 
   .footer {
     width: 100%;
-    height: 5%;
+    padding:10px;
+    height: 40px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-size: 18px;
-
+    color: white;
+    background-color: $primaryOptional2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     .name {
-      width: 90%;
-      text-align: left;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      width: 10%;
+      width: fit-content;
     }
   }
 }
