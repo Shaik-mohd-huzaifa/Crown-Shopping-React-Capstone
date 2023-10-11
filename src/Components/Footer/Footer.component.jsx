@@ -1,7 +1,7 @@
-import {} from "./Footer.styled";
+import { FooterContainer } from "./Footer.styled";
 
 const Footer = () => {
-  return <div className="">This is Footer</div>;
+  return <FooterContainer>This is Footer</FooterContainer>;
 };
 
 export default Footer;
