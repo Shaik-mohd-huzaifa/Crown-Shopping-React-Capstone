@@ -5,12 +5,14 @@ export const IntroContainer = styled.div`
   width: 100%;
   padding: 0px 20px;
   height: 580px;
+  display: flex;
 `;
 
 export const Content = styled.div`
   width: 50%;
   height: 100%;
-  padding-right: 5%;
+  padding-right: 50px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,4 +33,8 @@ export const Content = styled.div`
   p {
     font-size: 18px;
   }
+`;
+
+export const ImageContainer = styled.div`
+  width: 50%;
 `;

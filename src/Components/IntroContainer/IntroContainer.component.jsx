@@ -1,4 +1,8 @@
-import { Content, IntroContainer } from "./IntroContainer.styled";
+import {
+  Content,
+  IntroContainer,
+  ImageContainer,
+} from "./IntroContainer.styled";
 
 const Intro = () => {
   return (
@@ -15,6 +19,9 @@ const Intro = () => {
           taste and sets you apart from the crowd.
         </p>
       </Content>
+      <ImageContainer>
+        <img src="./../../assets/Landing.jpg" alt="" />
+      </ImageContainer>
     </IntroContainer>
   );
 };
