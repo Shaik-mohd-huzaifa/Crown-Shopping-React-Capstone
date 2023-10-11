@@ -1,8 +1,7 @@
 import Button, { BUTTON_CLASSES_TYPES } from "../button/button.component";
 import "./product-card.styles.scss";
 import { ShoppingCartContext } from "../../contexts/ShoppingCart.Context";
-import { useContext, useState } from "react";
-import { ShopdataContext } from "../../contexts/ShopData.Context";
+import { useContext } from "react";
 
 export const ProductCard = ({ product }) => {
   const { imageUrl, name, price } = product;
