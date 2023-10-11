@@ -44,4 +44,6 @@ export const LogoContainer = styled.div`
   }
 `;
 
-export const QuickLinksContainer = styled.div``;
+export const QuickLinksContainer = styled.div`
+  display: flex;
+`;
