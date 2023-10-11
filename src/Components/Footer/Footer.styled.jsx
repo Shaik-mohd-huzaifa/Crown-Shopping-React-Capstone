@@ -42,3 +42,5 @@ export const LogoContainer = styled.div`
     border-radius: 10px;
   }
 `;
+
+export const QuickLinksContainer = styled.div``;
