@@ -34,5 +34,6 @@ export const LogoContainer = styled.div`
   align-items: center;
   column-gap: 10px;
   img {
+    width: 50px;
   }
 `;
