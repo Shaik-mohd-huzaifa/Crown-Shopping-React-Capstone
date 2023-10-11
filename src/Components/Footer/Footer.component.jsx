@@ -19,8 +19,8 @@ const Footer = () => {
             <h2>Couture Cart</h2>
           </LogoContainer>
           <QuickLinksContainer>
-            <Button ButtonType={BUTTON_CLASSES_TYPES.base}>Sign Up</Button>
-            <Button ButtonType={BUTTON_CLASSES_TYPES.base}>Log in</Button>
+            <Button ButtonType={BUTTON_CLASSES_TYPES.inverted}>Sign Up</Button>
+            <Button ButtonType={BUTTON_CLASSES_TYPES.inverted}>Log in</Button>
           </QuickLinksContainer>
         </BrandInfo>
       </FooterTop>
