@@ -23,6 +23,8 @@ export const FooterBottom = styled.div`
   border-bottom-right-radius: 10px;
 `;
 
-export const BrandInfo = styled.div``;
+export const BrandInfo = styled.div`
+  width: 50%;
+`;
 
 export const LogoContainer = styled.div``;
