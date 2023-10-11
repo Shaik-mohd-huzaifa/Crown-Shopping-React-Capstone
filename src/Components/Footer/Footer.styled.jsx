@@ -25,9 +25,8 @@ export const FooterBottom = styled.div`
 
 export const BrandInfo = styled.div`
   width: 50%;
-  padding: 10px;
+  padding: 30px 0px 30px 50px;
   display: flex;
-  padding-left: 50px;
   flex-direction: column;
   row-gap: 20px;
 `;
