@@ -38,8 +38,12 @@ export const Content = styled.div`
 export const ImageContainer = styled.div`
   width: 50%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    border-radius: 20px;
+    /* height: 100px; */
   }
 `;
