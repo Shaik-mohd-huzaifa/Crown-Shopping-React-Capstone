@@ -9,7 +9,11 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterTop>
-        <BrandInfo></BrandInfo>
+        <BrandInfo>
+          <LogoContainer>
+            <img src="../../assets/Website Logo.png" alt="Logo" />
+          </LogoContainer>
+        </BrandInfo>
       </FooterTop>
       <FooterBottom></FooterBottom>
     </FooterContainer>
