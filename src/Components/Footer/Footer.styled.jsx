@@ -25,6 +25,7 @@ export const FooterBottom = styled.div`
 
 export const BrandInfo = styled.div`
   width: 50%;
+  display: flex;
 `;
 
 export const LogoContainer = styled.div``;
