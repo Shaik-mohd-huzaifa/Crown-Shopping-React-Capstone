@@ -9,6 +9,8 @@ export const FooterContainer = styled.div`
 `;
 
 
-export const FooterTop = styled.div``;
+export const FooterTop = styled.div`
+  width: 100%;
+`;
 
 export const FooterBottom = styled.div``;
