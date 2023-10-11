@@ -3,6 +3,7 @@ import { DEFAULT_COLOURS } from "../../base/default.colors";
 
 export const FooterContainer = styled.div`
   width: 100%;
+  margin-top: 40px;
   border-radius: 10px;
   background-color: ${DEFAULT_COLOURS.primaryOptional2};
 `;
