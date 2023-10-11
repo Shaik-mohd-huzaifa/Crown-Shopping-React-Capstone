@@ -5,6 +5,7 @@ import {
   BrandInfo,
   QuickLinksContainer,
   LogoContainer,
+  SocialLinksContainer,
 } from "./Footer.styled";
 import Logo from "./../../assets/Website Logo.png";
 import Button, { BUTTON_CLASSES_TYPES } from "../button/button.component";
