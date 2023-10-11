@@ -11,7 +11,7 @@ export const FooterContainer = styled.div`
 
 export const FooterTop = styled.div`
   width: 100%;
-
+  display: flex;
 `;
 
 export const FooterBottom = styled.div`
