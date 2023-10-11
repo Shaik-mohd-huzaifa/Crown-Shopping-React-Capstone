@@ -3,6 +3,7 @@ import {
   FooterTop,
   FooterBottom,
   BrandInfo,
+  QuickLinksContainer,
   LogoContainer,
 } from "./Footer.styled";
 import Logo from "./../../assets/Website Logo.png";
@@ -16,6 +17,7 @@ const Footer = () => {
             <img src={Logo} alt="Logo" />
             <h2>Couture Cart</h2>
           </LogoContainer>
+          <QuickLinksContainer></QuickLinksContainer>
         </BrandInfo>
       </FooterTop>
       <FooterBottom></FooterBottom>
