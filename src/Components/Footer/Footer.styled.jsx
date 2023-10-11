@@ -7,3 +7,8 @@ export const FooterContainer = styled.div`
   border-radius: 10px;
   background-color: ${DEFAULT_COLOURS.primaryOptional2};
 `;
+
+
+export const FooterTop = styled.div``;
+
+export const FooterBottom = styled.div``;
