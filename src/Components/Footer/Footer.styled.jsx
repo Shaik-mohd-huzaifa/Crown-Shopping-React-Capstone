@@ -21,6 +21,7 @@ export const FooterBottom = styled.div`
   justify-content: space-between;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding: 0px 20px;
   p {
     color: white;
   }
