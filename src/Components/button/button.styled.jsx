@@ -11,9 +11,10 @@ export const BaseButton = styled.button`
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: "Roboto Condensed";
+  font-family: "Inter";
   font-weight: bolder;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
