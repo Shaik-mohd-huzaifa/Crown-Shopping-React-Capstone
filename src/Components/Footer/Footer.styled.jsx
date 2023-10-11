@@ -46,4 +46,5 @@ export const LogoContainer = styled.div`
 
 export const QuickLinksContainer = styled.div`
   display: flex;
+  column-gap: 10px;
 `;
