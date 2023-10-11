@@ -55,5 +55,6 @@ export const SocialLinksContainer = styled.div`
   display: flex;
   column-gap: 10px;
   img {
+    width: 40px;
   }
 `;
