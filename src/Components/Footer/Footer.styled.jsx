@@ -31,4 +31,6 @@ export const BrandInfo = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
+  img {
+  }
 `;
