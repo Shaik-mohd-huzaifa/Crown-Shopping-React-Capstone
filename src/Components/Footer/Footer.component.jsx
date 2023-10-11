@@ -5,6 +5,7 @@ import {
   BrandInfo,
   LogoContainer,
 } from "./Footer.styled";
+import Logo from "./../../assets/Website Logo.png";
 
 const Footer = () => {
   return (
@@ -12,7 +13,8 @@ const Footer = () => {
       <FooterTop>
         <BrandInfo>
           <LogoContainer>
-            <img src="../../assets/Website Logo.png" alt="Logo" />
+            <img src={Logo} alt="Logo" />
+            <h2>Couture Cart</h2>
           </LogoContainer>
         </BrandInfo>
       </FooterTop>
