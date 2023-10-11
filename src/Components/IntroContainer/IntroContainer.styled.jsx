@@ -37,4 +37,9 @@ export const Content = styled.div`
 
 export const ImageContainer = styled.div`
   width: 50%;
+  height: 100%;
+  img {
+    width: 100px;
+    height: 100px;
+  }
 `;
