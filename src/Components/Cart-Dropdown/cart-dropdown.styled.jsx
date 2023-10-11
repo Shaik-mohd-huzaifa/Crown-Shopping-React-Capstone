@@ -1,16 +1,18 @@
 import { styled } from "styled-components";
+import { DEFAULT_COLOURS } from "../../base/default.colors";
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  width: 240px;
+  width: 300px;
   height: 340px;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid black;
+  border-radius: 10px;
+  border: 4px dashed ${DEFAULT_COLOURS.primaryOptional2};
   background-color: white;
-  top: 120px;
-  right: 60px;
+  top: 80px;
+  right: 40px;
   z-index: 5;
 
   button {
