@@ -25,7 +25,7 @@ export const Navbar = () => {
       <Navigation>
         <LogoContainer to="/">
           <img className="logo" src={Logo} alt="logo" />
-          <p>CoutureCartv</p>
+          <p>CoutureCart</p>
         </LogoContainer>
         <NavLinkContainer>
           <NavLink to="/shop">Shop</NavLink>
