@@ -7,7 +7,7 @@ import {
   LogoContainer,
 } from "./Footer.styled";
 import Logo from "./../../assets/Website Logo.png";
-import Button from "../button/button.component";
+import Button, { BUTTON_CLASSES_TYPES } from "../button/button.component";
 
 const Footer = () => {
   return (
@@ -18,7 +18,10 @@ const Footer = () => {
             <img src={Logo} alt="Logo" />
             <h2>Couture Cart</h2>
           </LogoContainer>
-          <QuickLinksContainer></QuickLinksContainer>
+          <QuickLinksContainer>
+            <Button ButtonType={BUTTON_CLASSES_TYPES.base}>Sign Up</Button>
+            <Button ButtonType={BUTTON_CLASSES_TYPES.base}>Log in</Button>
+          </QuickLinksContainer>
         </BrandInfo>
       </FooterTop>
       <FooterBottom></FooterBottom>
