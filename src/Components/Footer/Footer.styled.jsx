@@ -19,4 +19,5 @@ export const FooterBottom = styled.div`
   height: 50px;
   background-color: black;
   display: flex;
+  justify-content: space-between;
 `;
