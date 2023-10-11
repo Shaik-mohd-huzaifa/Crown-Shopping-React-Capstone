@@ -27,6 +27,7 @@ export const BrandInfo = styled.div`
   width: 50%;
   padding: 10px;
   display: flex;
+  padding-left: 50px;
   flex-direction: column;
 `;
 
