@@ -7,7 +7,7 @@ export const CartDropdownContainer = styled.div`
   height: 340px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   border: 4px dashed ${DEFAULT_COLOURS.primaryOptional2};
   background-color: white;
