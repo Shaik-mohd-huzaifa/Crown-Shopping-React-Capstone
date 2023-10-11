@@ -33,8 +33,9 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   column-gap: 10px;
-  color: white;
-  font-weight: 400;
+  h2 {
+    color: white;
+  }
   img {
     width: 50px;
     border-radius: 10px;
