@@ -13,4 +13,6 @@ export const FooterTop = styled.div`
   width: 100%;
 `;
 
-export const FooterBottom = styled.div``;
+export const FooterBottom = styled.div`
+  width: 100%;
+`;
