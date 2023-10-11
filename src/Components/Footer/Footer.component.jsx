@@ -7,6 +7,7 @@ import {
   LogoContainer,
   SocialLinksContainer,
 } from "./Footer.styled";
+import Twitter from './../../assets/twitter.svg'
 import Logo from "./../../assets/Website Logo.png";
 import Button, { BUTTON_CLASSES_TYPES } from "../button/button.component";
 
