@@ -29,6 +29,7 @@ export const BrandInfo = styled.div`
   display: flex;
   padding-left: 50px;
   flex-direction: column;
+  row-gap: 20px;
 `;
 
 export const LogoContainer = styled.div`
