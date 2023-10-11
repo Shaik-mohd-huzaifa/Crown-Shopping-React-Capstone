@@ -33,7 +33,10 @@ const Footer = () => {
           </SocialLinksContainer>
         </BrandInfo>
       </FooterTop>
-      <FooterBottom></FooterBottom>
+      <FooterBottom>
+        <p></p>
+        <p></p>
+      </FooterBottom>
     </FooterContainer>
   );
 };
