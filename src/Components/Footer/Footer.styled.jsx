@@ -24,3 +24,5 @@ export const FooterBottom = styled.div`
 `;
 
 export const BrandInfo = styled.div``;
+
+export const LogoContainer = styled.div``;

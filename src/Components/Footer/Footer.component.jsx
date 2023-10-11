@@ -3,6 +3,7 @@ import {
   FooterTop,
   FooterBottom,
   BrandInfo,
+  LogoContainer,
 } from "./Footer.styled";
 
 const Footer = () => {
