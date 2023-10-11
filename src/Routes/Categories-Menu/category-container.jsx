@@ -8,6 +8,7 @@ export const CategoryContainer = () => {
   return (
     <div>
       <Intro />
+      <h2 className="category-header">Categories</h2>
       <div className="categories-container">
         {categoriesData.map((category) => (
           <CategoryCard
