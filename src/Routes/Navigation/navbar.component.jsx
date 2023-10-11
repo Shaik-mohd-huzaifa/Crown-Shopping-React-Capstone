@@ -17,7 +17,7 @@ import {
 import UserProfile from "../../Components/UserProfileIcon/userProfile.component";
 
 export const Navbar = () => {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector();
   const { isCartOpen } = useContext(ShoppingCartContext);
 
   return (
