@@ -27,9 +27,9 @@ const Footer = () => {
             <Button ButtonType={BUTTON_CLASSES_TYPES.inverted}>Log in</Button>
           </QuickLinksContainer>
           <SocialLinksContainer>
-            <img src={Twitter} alt="" />
+            <img src={Twitter} alt="Twitter" />
             <img src={Github} alt="" />
-            <img src={} alt="" />
+            <img src={Discord} alt="" />
           </SocialLinksContainer>
         </BrandInfo>
       </FooterTop>
