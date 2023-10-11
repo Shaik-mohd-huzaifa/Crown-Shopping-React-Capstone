@@ -20,7 +20,7 @@ const Intro = () => {
         </p>
       </Content>
       <ImageContainer>
-        <img src="./../../assets/Landing.jpg" alt="" />
+        <img src="assets/Landing.png" alt="Landing" />
       </ImageContainer>
     </IntroContainer>
   );
