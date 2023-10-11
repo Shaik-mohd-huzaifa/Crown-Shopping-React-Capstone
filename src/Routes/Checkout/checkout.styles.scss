@@ -1,3 +1,5 @@
+@import "./../../base/default.colors.scss";
+
 .checkout-container {
   width: 55%;
   min-height: 90vh;
@@ -24,8 +26,14 @@
   }
 
   .total {
+    background-color: $primaryOptional2;
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    text-align: right;
   }
 }
