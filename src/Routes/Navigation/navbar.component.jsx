@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
 import Logo from "../../assets/Website Logo.png";
+import { useSelector } from "react-redux";
 import { UserContext } from "../../contexts/User.Context";
 import Footer from "../../Components/Footer/Footer.component";
 import CartIcon from "../../Components/Cart/Cart.component";
@@ -24,7 +25,7 @@ export const Navbar = () => {
       <Navigation>
         <LogoContainer to="/">
           <img className="logo" src={Logo} alt="logo" />
-          <p>CoutureCart</p>
+          <p>CoutureCartv</p>
         </LogoContainer>
         <NavLinkContainer>
           <NavLink to="/shop">Shop</NavLink>
