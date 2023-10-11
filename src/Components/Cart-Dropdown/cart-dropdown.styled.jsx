@@ -31,4 +31,18 @@ export const CartItems = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${DEFAULT_COLOURS.primaryOptional2};
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: black;
+  }
 `;
