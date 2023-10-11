@@ -11,9 +11,6 @@ export const FooterContainer = styled.div`
 export const FooterTop = styled.div`
   width: 100%;
   display: flex;
-  p {
-    color: white;
-  }
 `;
 
 export const FooterBottom = styled.div`
@@ -24,6 +21,9 @@ export const FooterBottom = styled.div`
   justify-content: space-between;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  p {
+    color: white;
+  }
 `;
 
 export const BrandInfo = styled.div`

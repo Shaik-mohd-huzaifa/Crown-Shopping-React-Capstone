@@ -34,8 +34,8 @@ const Footer = () => {
         </BrandInfo>
       </FooterTop>
       <FooterBottom>
-        <p>&#169; CoutureCart </p>
-        <p></p>
+        <p>&#169; CoutureCart Inc. All Rights Reserved</p>
+        <p> </p>
       </FooterBottom>
     </FooterContainer>
   );
