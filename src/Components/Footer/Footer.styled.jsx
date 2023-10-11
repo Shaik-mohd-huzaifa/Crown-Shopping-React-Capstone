@@ -35,5 +35,6 @@ export const LogoContainer = styled.div`
   column-gap: 10px;
   img {
     width: 50px;
+    border-radius: 10px;
   }
 `;
