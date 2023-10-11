@@ -3,6 +3,7 @@ import {
   IntroContainer,
   ImageContainer,
 } from "./IntroContainer.styled";
+import Landing from "../../assets/Landing.jpg";
 
 const Intro = () => {
   return (
@@ -20,7 +21,7 @@ const Intro = () => {
         </p>
       </Content>
       <ImageContainer>
-        <img src="assets/Landing.png" alt="Landing" />
+        <img src={Landing} alt="Landing" />
       </ImageContainer>
     </IntroContainer>
   );
