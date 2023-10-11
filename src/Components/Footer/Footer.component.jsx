@@ -27,7 +27,7 @@ const Footer = () => {
           </QuickLinksContainer>
           <SocialLinksContainer>
             <img src={Twitter} alt="" />
-            <img src={} alt="" />
+            <img src={Github} alt="" />
             <img src={} alt="" />
           </SocialLinksContainer>
         </BrandInfo>
