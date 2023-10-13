@@ -13,7 +13,7 @@ const getButton = (buttontype = BUTTON_CLASSES_TYPES.base) =>
     [BUTTON_CLASSES_TYPES.inverted]: InvertedButton,
   })[buttontype];
 
-const Button = ({ children, ButtonType, ...otherprops }) => {
+const Button = ({ children, ButtonType, clickEvent, ...otherprops }) => {
   const CustomButton = getButton(ButtonType);
   return <CustomButton {...otherprops}>{children}</CustomButton>;
 };

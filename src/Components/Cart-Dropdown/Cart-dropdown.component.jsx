@@ -25,9 +25,7 @@ const CartDropDown = () => {
           cartItems.map((item) => <CartItem key={item.id} item={item} />)
         )}
       </CartItems>
-      <Button onClick={navigateToCheckout} disabled={cartItems || true}>
-        CheckOut
-      </Button>
+      <Button onClick={navigateToCheckout}>CheckOut</Button>
     </CartDropdownContainer>
   );
 };
