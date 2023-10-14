@@ -28,6 +28,7 @@ const Checkout = () => {
         <CheckoutItem itemdetails={item} key={item.id} />
       ))}
       <div className="total">TOTAL: ${totalPrice}</div>
+      
     </div>
   );
 };

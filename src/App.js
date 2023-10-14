@@ -17,20 +17,16 @@ import { Error404 } from "./Components/404/404";
 
 function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     const unsubscribe = onAuthUserStateChanged((user) => {
-      try {
-        if (user) {
-          createUserDocumentFromAuth(user);
-        }
-      } catch (error) {
-        dispatch(setCurrentUser({}));
-        redirect("/404");
+      if (user) {
+        createUserDocumentFromAuth(user);
       }
       dispatch(setCurrentUser(user));
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
   return (
     <div className="App">
       <Routes>

@@ -4,7 +4,7 @@ const INITIAL_STATE = {
 };
 
 export const userReducer = (state = INITIAL_STATE, action) => {
-  const { type, currentUser } = action;
+  const { type, payload: currentUser } = action;
   switch (type) {
     case REDUCER_ACTION_TYPES.UPDATE_CURRENT_USER:
       console.log(currentUser);

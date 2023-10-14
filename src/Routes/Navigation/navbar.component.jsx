@@ -15,10 +15,17 @@ import {
   NavLink,
 } from "./navigation.styled";
 import UserProfile from "../../Components/UserProfileIcon/userProfile.component";
+import Button, {
+  BUTTON_CLASSES_TYPES,
+} from "../../Components/button/button.component";
+import { userSignOut } from "../../utils/Firebase/firebase.utils";
 
 export const Navbar = () => {
-  const { currentUser } = useContext(UserContext);
+  // const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector((state) => state.user.currentUser);
   const { isCartOpen } = useContext(ShoppingCartContext);
+
+  const email = currentUser ? currentUser.email : "";
 
   return (
     <Fragment>
@@ -29,7 +36,11 @@ export const Navbar = () => {
         </LogoContainer>
         <NavLinkContainer>
           <NavLink to="/shop">Shop</NavLink>
-          {currentUser || <NavLink to="/auth">Sign in</NavLink>}
+          {currentUser ? (
+            <NavLink onClick={userSignOut}>Sign Out</NavLink>
+          ) : (
+            <NavLink to="/auth">Sign in</NavLink>
+          )}
           <CartIcon />
         </NavLinkContainer>
         {isCartOpen && <CartDropDown />}
