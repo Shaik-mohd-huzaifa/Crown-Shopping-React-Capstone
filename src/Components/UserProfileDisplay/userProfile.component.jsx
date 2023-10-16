@@ -1,15 +1,39 @@
-import { ProfileContainer, ToggleContainer } from "./userProfile.styled";
+import {
+  ProfileContainer,
+  InfoContainer,
+  ImageContainer,
+  Info,
+  QuickLinks,
+} from "./userProfile.styled";
 import { userSignOut } from "../../utils/Firebase/firebase.utils";
-import Button, { BUTTON_CLASSES_TYPES } from "../button/button.component";
+import Logout from "./../../assets/logout.png";
+import Wishlist from "./../../assets/wishlist.png";
+import Cart from "./../../assets/shopping-bag.svg";
 
-const UserProfile = ({ ProfileImage }) => {
+const UserProfile = ({ ProfileImage, userEmail, userName }) => {
   return (
     <ProfileContainer>
-      <img src={ProfileImage} alt="Profile" />
-      <ToggleContainer>
-        <span onClick={userSignOut}>Log Out</span>
-        <Button ButtonType={BUTTON_CLASSES_TYPES.inverted} />
-      </ToggleContainer>
+      <InfoContainer>
+        <ImageContainer>
+          <img src={ProfileImage} alt="Profile" />
+        </ImageContainer>
+        <Info>
+          <p>{userName}</p>
+          <p>{userEmail}</p>
+        </Info>
+      </InfoContainer>
+      <QuickLinks>
+        <img src={Wishlist} alt="" />
+        <span>Wishlist</span>
+      </QuickLinks>
+      <QuickLinks>
+        <img src={Cart} alt="" />
+        <span>Cart</span>
+      </QuickLinks>
+      <p className="logout">
+        <img src={Logout} alt="" />
+        Logout
+      </p>
     </ProfileContainer>
   );
 };

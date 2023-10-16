@@ -32,6 +32,7 @@ export const NavLinkContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: flex-end;
   padding-right: 10px;
 `;

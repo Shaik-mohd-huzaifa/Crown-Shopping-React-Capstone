@@ -4,5 +4,5 @@ import { UserProfileToggleReducer } from "./UserProfile/userProfile.reducer";
 
 export const rootreducer = combineReducers({
   user: userReducer,
-  isUserProfileOpen: UserProfileToggleReducer,
+  ProfileOpen: UserProfileToggleReducer,
 });

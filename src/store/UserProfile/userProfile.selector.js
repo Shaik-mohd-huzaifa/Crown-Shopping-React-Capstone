@@ -1,1 +1,2 @@
-export const userToggleSelector = (state) => state.isUserProfileOpen;
+export const userToggleSelector = (state) =>
+  state.ProfileOpen.isUserProfileOpen;

@@ -22,16 +22,9 @@ import { userToggleSelector } from "../../store/UserProfile/userProfile.selector
 import { ToggleUserProfile } from "../../store/UserProfile/userProfile.action";
 
 export const Navbar = () => {
-  const dispatch = useDispatch();
-
   const currentUser = useSelector((state) => state.user.currentUser);
   const isProfileOpen = useSelector(userToggleSelector);
   const { isCartOpen } = useContext(ShoppingCartContext);
-
-  const HandleUserProfileToggle = () => {
-    dispatch(ToggleUserProfile);
-    console.log(isProfileOpen);
-  };
 
   return (
     <Fragment>
@@ -47,7 +40,6 @@ export const Navbar = () => {
           {isCartOpen && <CartDropDown />}
           {currentUser && (
             <UserProfileIcon
-              onClickEvent={() => HandleUserProfileToggle}
               ProfileImage={
                 currentUser.photoURL
                   ? currentUser.photoURL
@@ -56,8 +48,14 @@ export const Navbar = () => {
             />
           )}
         </NavLinkContainer>
+        {isProfileOpen && (
+          <UserProfile
+            ProfileImage={currentUser.photoURL}
+            userName={currentUser.displayName}
+            userEmail={currentUser.email}
+          />
+        )}
       </Navigation>
-      {currentUser && <UserProfile ProfileImage="../../assets/crown.svg" />}
       <Outlet />
       <Footer />
     </Fragment>
