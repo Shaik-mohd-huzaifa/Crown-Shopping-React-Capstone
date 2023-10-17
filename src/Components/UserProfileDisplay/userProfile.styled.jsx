@@ -69,19 +69,19 @@ export const InfoContainer = styled.div`
 `;
 export const ImageContainer = styled.div`
   width: 30px;
-  height: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   img {
     width: 100%;
-    height: 100%;
     border-radius: 50%;
   }
 `;
 export const Info = styled.div`
   display: flex;
-  height: 100%;
+  height: 40px;
   flex-direction: column;
-  /* width: auto; */
-  justify-content: flex-start;
+  justify-content: center;
   p {
     margin: 0;
     font-size: 14px;

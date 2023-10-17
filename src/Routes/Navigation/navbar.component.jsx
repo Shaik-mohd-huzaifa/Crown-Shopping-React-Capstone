@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
-import { Fragment, useContext, useEffect } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import Logo from "../../assets/Website Logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../../Components/Footer/Footer.component";
@@ -20,11 +20,19 @@ import Button, {
 import UserProfileIcon from "../../Components/userProfileIcon/userIcon.component";
 import { userToggleSelector } from "../../store/UserProfile/userProfile.selector";
 import { ToggleUserProfile } from "../../store/UserProfile/userProfile.action";
+import UserLogo from "./../../assets/userIcon.png";
 
 export const Navbar = () => {
+  const [PhotoURL, setPhotoURL] = useState("");
   const currentUser = useSelector((state) => state.user.currentUser);
   const isProfileOpen = useSelector(userToggleSelector);
   const { isCartOpen } = useContext(ShoppingCartContext);
+
+  useEffect(() => {
+    const URL = currentUser ? currentUser.photoURL || UserLogo : "";
+    console.log(URL);
+    setPhotoURL(URL);
+  }, [currentUser]);
 
   return (
     <Fragment>
@@ -40,19 +48,15 @@ export const Navbar = () => {
           {isCartOpen && <CartDropDown />}
           {currentUser && (
             <UserProfileIcon
-              ProfileImage={
-                currentUser.photoURL
-                  ? currentUser.photoURL
-                  : `${currentUser.email[0].png}`
-              }
+              ProfileImage={PhotoURL ? PhotoURL : `${currentUser.email[0].png}`}
             />
           )}
         </NavLinkContainer>
         {isProfileOpen && (
           <UserProfile
-            ProfileImage={currentUser.photoURL}
-            userName={currentUser.displayName}
-            userEmail={currentUser.email}
+            ProfileImage={UserLogo}
+            userName={currentUser ? currentUser.displayName || "" : ""}
+            userEmail={currentUser ? currentUser.email || "" : ""}
           />
         )}
       </Navigation>
