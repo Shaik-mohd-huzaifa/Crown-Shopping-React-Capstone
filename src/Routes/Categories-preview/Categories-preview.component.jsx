@@ -1,10 +1,10 @@
-import { ShopdataContext } from "../../contexts/ShopData.Context";
-import { useContext } from "react";
 import "../Shop/shop.styles.scss";
 import CategoryPreview from "../../Components/Category Preview/Category-preview.component";
+import { CategorySelector } from "./../../store/Category/category.selector";
+import { useSelector } from "react-redux";
 
 const CategoriesPreview = () => {
-  const { shopdata } = useContext(ShopdataContext);
+  const shopdata = useSelector(CategorySelector);
   return (
     <div className="shop-container">
       {Object.keys(shopdata).map((title) => {

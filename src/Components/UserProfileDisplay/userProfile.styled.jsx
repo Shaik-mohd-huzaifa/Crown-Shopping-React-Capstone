@@ -12,6 +12,7 @@ export const ProfileContainer = styled.div`
   background-color: white;
   padding: 10px 10px;
   position: absolute;
+  z-index: 1000;
   top: 80px;
   right: 33px;
   border-radius: 10px;
